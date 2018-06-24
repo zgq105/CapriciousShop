@@ -1,0 +1,7 @@
+#申明不提交的文件夹和文件
+/4代码/common-lib/target
+
+/4代码/rxd-dataserver/target
+
+/4代码/rxd-webapp/target
+
