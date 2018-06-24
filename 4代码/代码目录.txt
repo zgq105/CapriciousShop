@@ -1,0 +1,4 @@
+comom-lib 基础类库工程（纯jar）
+rxd-dataserver 基础插件服务接口工程
+rxd-webapp 网站工程
+rxd-h5app h5移动APP工程
