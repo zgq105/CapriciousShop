@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <swiper v-bind:list="swipDatas" v-bind:auto="true" dots-position="center">
-    </swiper>
-    <grid :show-lr-borders="false" :show-vertical-dividers="false">
-      <grid-item :label="item.name" v-for="item in gridDatas">
-        <img slot="icon" :src="item.imgUrl">
-      </grid-item>
-    </grid>
-    <ContentPanel></ContentPanel>
+  <div class="main-container" id="main-container">
+    <Head class="main-header" :headTitle="headTitle" ></Head>
+    <div class="main-content">
+      <router-view></router-view>
+    </div>
+    <BottomTab class="main-footer"></BottomTab>
   </div>
 </template>
 
+
 <script type="text/javascript">
+  import Vue from 'vue'
+  import Head from './Head.vue'
+  import Home from './Home.vue'
   import ContentPanel from './ContentPanel.vue'
+  import BottomTab from './BottomTab.vue'
   import {Swiper} from 'vux'
   import {Grid, GridItem} from 'vux'
 
   export default {
     data() {
       return {
+        headTitle: "护肤品商城",
         swipDatas: [
           {
             url: 'http://www.baidu.com',
@@ -58,14 +61,18 @@
       }
     },
     components: {
+      Head,
+      BottomTab,
       Swiper,
       Grid,
       GridItem,
-      ContentPanel
+      ContentPanel,
+      Home,
+      Vue
     }
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  @import "home.styl";
+  @import "main.styl";
 </style>

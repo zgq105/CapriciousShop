@@ -1,5 +1,7 @@
 <template>
-  <h1>classfy</h1>
+    <div>
+
+    </div>
 </template>
 
 <script>

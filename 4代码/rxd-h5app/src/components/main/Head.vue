@@ -1,12 +1,13 @@
 <template>
-<div><p>{{headTitle}}</p></div>
+<div class="head-root"><p>{{headTitle}}</p></div>
 </template>
 
 <script>
    export default {
-     data(){
-       return {
-         headTitle:"护肤品"
+     props:{
+       headTitle:{
+         type:String,
+         default:"护肤品"
        }
      }
    }
